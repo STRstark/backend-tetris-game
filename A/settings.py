@@ -24,6 +24,23 @@ SECRET_KEY = 'django-insecure-knli(^t#s!u-hv*tqu9o*8n(!@lc-ycuz9fa3!m_7u8hlr20n0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+
+CORS_ALLOW_HEADERS = [
+            'content-type',
+            'authorization',
+            ...
+        ]
+
 ALLOWED_HOSTS = ['tetris-back.chbk.app']
 
 # Application definition
@@ -41,6 +58,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
 
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +69,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'A.urls'
