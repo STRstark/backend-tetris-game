@@ -24,8 +24,6 @@ SECRET_KEY = 'django-insecure-knli(^t#s!u-hv*tqu9o*8n(!@lc-ycuz9fa3!m_7u8hlr20n0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CORS_ORIGIN_ALLOW_ALL = True
-
 ALLOWED_HOSTS = ['tetris-back.chbk.app']
 
 # Application definition
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'drf_spectacular',
+
 ]
 
 MIDDLEWARE = [
