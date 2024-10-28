@@ -24,6 +24,9 @@ SECRET_KEY = 'django-insecure-knli(^t#s!u-hv*tqu9o*8n(!@lc-ycuz9fa3!m_7u8hlr20n0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+ALLOWED_HOSTS = ["tetris-back.chbk.app"]
+
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
